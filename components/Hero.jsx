@@ -5,7 +5,7 @@ export default function Hero({ openModal }) {
         <div>
           <div className="eyebrow">Commercial Interior Design Company</div>
           <h1>
-            Build spaces that match the scale of your business
+            Build spaces that match<br />the scale of your business
           </h1>
           <p>
             We partner with builders, developers and large enterprises to design and execute commercial

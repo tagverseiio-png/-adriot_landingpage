@@ -198,10 +198,10 @@ header {
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(38px, 5.2vw, 64px);
+  font-size: clamp(28px, 4vw, 52px);
   font-weight: 600;
   line-height: 1.05;
-  max-width: 680px;
+  max-width: 800px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -693,7 +693,7 @@ form .cta {
 
 /* ============ FOOTER ============ */
 footer {
-  background: var(--ink);
+  background: #000;
   color: rgba(255, 253, 251, 0.65);
   padding: 30px 0 20px;
   font-size: 13.5px;

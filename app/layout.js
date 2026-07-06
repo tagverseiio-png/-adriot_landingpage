@@ -27,7 +27,7 @@ const jsonLd = {
     'Commercial interior design company specializing in office, retail and corporate interiors.',
   areaServed: 'Tamil Nadu, India',
   priceRange: '$$',
-  telephone: '+91-XXXXXXXXXX',
+  telephone: '+91 99400 64343',
 };
 
 export default function RootLayout({ children }) {

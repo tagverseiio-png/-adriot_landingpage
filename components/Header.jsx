@@ -12,7 +12,7 @@ export default function Header({ openModal }) {
           <a href="#faq">FAQ</a>
         </nav>
         <div className="nav-cta">
-          <a href="tel:+91XXXXXXXXXX" className="cta" aria-label="Call our office now">
+          <a href="tel:+919940064343" className="cta" aria-label="Call our office now">
             Call Now
           </a>
         </div>
