@@ -260,7 +260,7 @@ section {
 }
 
 .section-head {
-  max-width: 640px;
+  max-width: 960px;
   margin-bottom: 30px;
 }
 
@@ -282,6 +282,7 @@ section {
   margin-top: 16px;
   font-size: 16.5px;
   color: var(--slate);
+  max-width: 640px;
 }
 
 /* ============ SERVICES ============ */
