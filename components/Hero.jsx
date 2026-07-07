@@ -9,9 +9,7 @@ export default function Hero({ openModal }) {
             <span className="h1-line">the scale of your business</span>
           </h1>
           <p>
-            We partner with builders, developers and large enterprises to design and execute commercial
-            interiors — corporate offices, retail chains, IT parks and business campuses — delivered on
-            schedule and on budget, with a single point of accountability from concept to handover.
+            We partner with builders, developers, and enterprises to deliver commercial interiors with end-to-end accountability, on time and on budget.
           </p>
           <div className="hero-bottom-row">
             <div className="hero-ctas">
