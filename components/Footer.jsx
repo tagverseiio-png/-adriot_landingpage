@@ -2,9 +2,9 @@ export default function Footer() {
   return (
     <footer>
       <div className="wrap">
-        <div className="foot-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', paddingBottom: '30px' }}>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <div style={{ display: 'inline-block', textAlign: 'left' }}>
+        <div className="foot-grid">
+          <div className="foot-col-left">
+            <div className="quick-links-inner">
               <h4 style={{ color: 'var(--brass)', marginBottom: '20px', letterSpacing: '0.1em', fontSize: '15px', textAlign: 'center' }}>QUICK LINKS</h4>
               <div style={{ display: 'grid', gridTemplateColumns: 'auto auto', gap: '14px 60px', justifyContent: 'flex-start' }}>
                 <a href="#services" style={{ textDecoration: 'none', color: 'inherit', transition: 'color 0.2s', fontSize: '12px', letterSpacing: '0.05em' }}>SERVICES</a>
