@@ -905,14 +905,19 @@ footer {
 }
 
 .floating-cta-pill:hover {
-  width: 230px;
-  border-radius: 30px;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
 }
 
-/* Call button — expands a bit narrower (phone number is shorter) */
-.floating-cta-call:hover {
-  width: 215px;
+/* Call & WhatsApp buttons — fixed circles, no expand on hover */
+.floating-cta-call,
+.floating-cta-whatsapp {
+  width: 56px !important;
+  border-radius: 28px !important;
+}
+.floating-cta-call:hover,
+.floating-cta-whatsapp:hover {
+  width: 56px !important;
+  border-radius: 28px !important;
 }
 
 /* WhatsApp button — signature green */
@@ -921,7 +926,6 @@ footer {
   box-shadow: 0 8px 28px rgba(37, 211, 102, 0.35) !important;
 }
 .floating-cta-whatsapp:hover {
-  width: 220px;
   background: #20ba59 !important;
   box-shadow: 0 12px 36px rgba(37, 211, 102, 0.45) !important;
 }
@@ -942,32 +946,18 @@ footer {
   pointer-events: none;
 }
 
-.floating-cta-pill:hover .floating-cta-icon {
-  width: 0;
-  font-size: 0;
-  overflow: hidden;
+/* All pills: icon always fills the circle */
+.floating-cta-icon {
+  flex-shrink: 0;
+  width: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Label — hidden until hover */
+/* Label: never shown (all buttons are icon-only) */
 .floating-cta-label {
-  white-space: nowrap;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  opacity: 0;
-  max-width: 0;
-  overflow: hidden;
-  transition:
-    opacity 0.25s ease 0.12s,
-    max-width 0.38s ease;
-  pointer-events: none;
-  padding: 0;
-}
-
-.floating-cta-pill:hover .floating-cta-label {
-  opacity: 1;
-  max-width: 200px;
-  padding: 0 22px;
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -987,8 +977,16 @@ footer {
     width: 215px;
   }
 
-  .floating-cta-call:hover {
-    width: 200px;
+  /* Keep call & WhatsApp as fixed circles on mobile too */
+  .floating-cta-call,
+  .floating-cta-whatsapp {
+    width: 50px !important;
+    border-radius: 25px !important;
+  }
+  .floating-cta-call:hover,
+  .floating-cta-whatsapp:hover {
+    width: 50px !important;
+    border-radius: 25px !important;
   }
 
   .floating-cta-icon {

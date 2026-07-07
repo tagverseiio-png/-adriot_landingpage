@@ -35,7 +35,12 @@ export default function FloatingCta({ openModal }) {
 
       {/* Get Free Quote button */}
       <button className="cta floating-cta-pill" onClick={openModal} aria-label="Get a free quote">
-        <span className="floating-cta-icon">Q</span>
+        <span className="floating-cta-icon">
+          {/* Message bubble icon */}
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0 14H6l-2 2V4h16v12z"/>
+          </svg>
+        </span>
         <span className="floating-cta-label">GET FREE QUOTE</span>
       </button>
 
