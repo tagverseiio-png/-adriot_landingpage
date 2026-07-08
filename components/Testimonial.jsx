@@ -1,6 +1,6 @@
 export default function Testimonial() {
   return (
-    <section className="testimonial">
+    <section className="testimonial" id="testimonials">
       <div className="wrap">
         <blockquote>
           &ldquo;Our 8,000 sq.ft office was designed and handed over in under 50 days, exactly

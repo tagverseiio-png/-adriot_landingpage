@@ -7,7 +7,7 @@ const cards = [
 
 export default function WhyUs({ openModal }) {
   return (
-    <section className="why">
+    <section className="why" id="why-us">
       <div className="wrap">
         <div className="section-head">
           <div className="eyebrow">Why Businesses Choose Us</div>

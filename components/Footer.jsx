@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer>
@@ -7,12 +9,12 @@ export default function Footer() {
             <div className="quick-links-inner">
               <h4 style={{ color: 'var(--brass)', marginBottom: '20px', letterSpacing: '0.1em', fontSize: '15px', textAlign: 'center' }}>QUICK LINKS</h4>
               <div style={{ display: 'grid', gridTemplateColumns: 'auto auto', gap: '14px 60px', justifyContent: 'flex-start' }}>
-                <a href="#services" style={{ textDecoration: 'none', color: 'inherit', transition: 'color 0.2s', fontSize: '12px', letterSpacing: '0.05em' }}>SERVICES</a>
-                <a href="#process" style={{ textDecoration: 'none', color: 'inherit', transition: 'color 0.2s', fontSize: '12px', letterSpacing: '0.05em' }}>OUR PROCESS</a>
-                <a href="#projects" style={{ textDecoration: 'none', color: 'inherit', transition: 'color 0.2s', fontSize: '12px', letterSpacing: '0.05em' }}>PROJECTS SHOWCASE</a>
-                <a href="#why-us" style={{ textDecoration: 'none', color: 'inherit', transition: 'color 0.2s', fontSize: '12px', letterSpacing: '0.05em' }}>WHY CHOOSE US</a>
-                <a href="#testimonials" style={{ textDecoration: 'none', color: 'inherit', transition: 'color 0.2s', fontSize: '12px', letterSpacing: '0.05em' }}>TESTIMONIALS</a>
-                <a href="#faq" style={{ textDecoration: 'none', color: 'inherit', transition: 'color 0.2s', fontSize: '12px', letterSpacing: '0.05em' }}>FAQ</a>
+                <Link href="/#services" style={{ textDecoration: 'none', color: 'inherit', transition: 'color 0.2s', fontSize: '12px', letterSpacing: '0.05em' }}>SERVICES</Link>
+                <Link href="/#process" style={{ textDecoration: 'none', color: 'inherit', transition: 'color 0.2s', fontSize: '12px', letterSpacing: '0.05em' }}>OUR PROCESS</Link>
+                <Link href="/#projects" style={{ textDecoration: 'none', color: 'inherit', transition: 'color 0.2s', fontSize: '12px', letterSpacing: '0.05em' }}>PROJECTS SHOWCASE</Link>
+                <Link href="/#why-us" style={{ textDecoration: 'none', color: 'inherit', transition: 'color 0.2s', fontSize: '12px', letterSpacing: '0.05em' }}>WHY CHOOSE US</Link>
+                <Link href="/#testimonials" style={{ textDecoration: 'none', color: 'inherit', transition: 'color 0.2s', fontSize: '12px', letterSpacing: '0.05em' }}>TESTIMONIALS</Link>
+                <Link href="/#faq" style={{ textDecoration: 'none', color: 'inherit', transition: 'color 0.2s', fontSize: '12px', letterSpacing: '0.05em' }}>FAQ</Link>
               </div>
             </div>
           </div>
