@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import CtaBanner from '@/components/CtaBanner';
@@ -11,14 +11,11 @@ import Testimonial from '@/components/Testimonial';
 import LeadForm from '@/components/LeadForm';
 import FinalCta from '@/components/FinalCta';
 import Footer from '@/components/Footer';
-import Modal from '@/components/Modal';
 import FloatingCta from '@/components/FloatingCta';
 
 export default function Home() {
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const openModal = () => setModalOpen(true);
-  const closeModal = () => setModalOpen(false);
+  const router = useRouter();
+  const openModal = () => router.push('/thankyou');
 
   return (
     <>
@@ -33,7 +30,6 @@ export default function Home() {
         <FinalCta openModal={openModal} />
       </main>
       <Footer />
-      <Modal isOpen={modalOpen} onClose={closeModal} />
       <FloatingCta openModal={openModal} />
     </>
   );
