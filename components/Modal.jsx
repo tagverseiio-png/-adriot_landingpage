@@ -1,16 +1,16 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Modal({ isOpen, onClose }) {
-  const [submitted, setSubmitted] = useState(false);
+  const router = useRouter();
   const [submitting, setSubmitting] = useState(false);
 
   // Reset state when modal closes
   useEffect(() => {
     if (!isOpen) {
       const timer = setTimeout(() => {
-        setSubmitted(false);
         setSubmitting(false);
       }, 300);
       return () => clearTimeout(timer);
@@ -31,12 +31,9 @@ export default function Modal({ isOpen, onClose }) {
     setSubmitting(true);
     // Simulate async API call
     setTimeout(() => {
-      setSubmitted(true);
       setSubmitting(false);
-      // Auto-close after 3 seconds
-      setTimeout(() => {
-        onClose();
-      }, 3000);
+      onClose();
+      router.push('/thankyou');
     }, 1000);
   }
 
@@ -53,12 +50,6 @@ export default function Modal({ isOpen, onClose }) {
           &times;
         </button>
 
-        {submitted ? (
-          <div className="global-modal-success">
-            <h3>Thank You!</h3>
-            <p>Your request has been received. Our team will contact you within 24 hours.</p>
-          </div>
-        ) : (
           <div>
             <h3>Get a Free Quote</h3>
             <p className="sub">Share your project details and we&apos;ll contact you shortly.</p>
@@ -106,7 +97,6 @@ export default function Modal({ isOpen, onClose }) {
               </button>
             </form>
           </div>
-        )}
       </div>
     </div>
   );

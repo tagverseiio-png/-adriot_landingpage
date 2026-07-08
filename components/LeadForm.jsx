@@ -1,13 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function LeadForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const router = useRouter();
 
   function handleSubmit(e) {
     e.preventDefault();
-    setSubmitted(true);
+    router.push('/thankyou');
   }
 
   return (
@@ -33,16 +34,6 @@ export default function LeadForm() {
           </div>
         </div>
 
-        {submitted ? (
-          <div style={{ textAlign: 'center', padding: '60px 0' }}>
-            <h3 style={{ fontFamily: 'var(--font-display)', color: 'var(--brass)', fontSize: '24px' }}>
-              Thank You!
-            </h3>
-            <p style={{ color: 'var(--slate)', marginTop: '12px' }}>
-              Your request has been received. Our team will contact you within 24 hours.
-            </p>
-          </div>
-        ) : (
           <form aria-label="Get a free interior design quote" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="name">Full Name</label>
@@ -79,7 +70,6 @@ export default function LeadForm() {
               Get My Free Quote
             </button>
           </form>
-        )}
       </div>
     </section>
   );
